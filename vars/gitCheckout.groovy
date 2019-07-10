@@ -5,7 +5,7 @@ def call(def giturl, def branch, def credentialId) {
 echo "giturl ${giturl}"
 echo "branch ${branch}"
 echo "credentialId ${credentialId}"
-/*
+
 checkout([$class: 'GitSCM', 
     branches: [[name: '*/master']], 
     doGenerateSubmoduleConfigurations: false, 
@@ -14,7 +14,7 @@ checkout([$class: 'GitSCM',
     userRemoteConfigs: [[credentialsId: '5bd19c27-30a1-42d9-9f82-2d62eb81e2ac', url: 'https://github.com/vernekarakshata/Inventory-Jenkins.git']]
 ])
 
-*/
+
 
 
 }
