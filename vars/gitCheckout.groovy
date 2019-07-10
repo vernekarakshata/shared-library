@@ -11,7 +11,7 @@ checkout([$class: 'GitSCM',
     doGenerateSubmoduleConfigurations: false, 
     extensions: [[$class: 'CleanCheckout']], 
     submoduleCfg: [], 
-    userRemoteConfigs: [[credentialsId: '${credentialId}', url: '${giturl}']]
+    userRemoteConfigs: [[credentialsId: ${credentialId}, url: '${giturl}']]
 ])
 
 
