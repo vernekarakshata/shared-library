@@ -7,7 +7,7 @@ echo "branch ${branch}"
 echo "credentialId ${credentialId}"
 
 checkout([$class: 'GitSCM', 
-    branches: [[name: '${branch}']], 
+    branches: [[name: "${branch}"]], 
     doGenerateSubmoduleConfigurations: false, 
     extensions: [[$class: 'CleanCheckout']], 
     submoduleCfg: [], 
