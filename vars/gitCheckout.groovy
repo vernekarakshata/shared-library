@@ -1,4 +1,4 @@
-def call(def giturl, def branch, def credentialId) {
+def call(def giturl, def branch) {
 //	git branch: '${branch}', credentialsId: '${credentialId}', url: '${giturl}'
 //	git([url: ${giturl}, branch: ${branch}, credentialsId: ${credentialId}])
 
