@@ -15,7 +15,7 @@ def call(def maventool, def pom, def mavenGoals, def artifactoryServerId,
   echo "deployersnapshotRepo ${deployersnapshotRepo}"
   
   
-  def server = Artifactory.server '"${artifactoryServerId}"'
+  def server = Artifactory.server "${artifactoryServerId}"
   def rtMaven = Artifactory.newMavenBuild()
   def buildInfo
   rtMaven.tool = "${maventool}" 
