@@ -28,27 +28,27 @@ def call(def maventool, def pom, def mavenGoals, def artifactoryServerId,
 
 
   rtMavenResolver (
-    id: '"${resolverId}"',
+    id: "${resolverId}"',
     serverId: "${artifactoryServerId}",
-    releaseRepo: '"${resolverReleaseRepo}"',
-    snapshotRepo: '"${resolversnapshotRepo}"'
+    releaseRepo: "${resolverReleaseRepo}",
+    snapshotRepo: "${resolversnapshotRepo}"
   )  
  
   rtMavenDeployer (
-      id: '"${deployerId}"',
+      id: "${deployerId}",
       serverId: "${artifactoryServerId}",
-      releaseRepo: '"${deployerReleaseRepo}"',
-      snapshotRepo: '"${deployersnapshotRepo}"'
+      releaseRepo: "${deployerReleaseRepo}",
+      snapshotRepo: "${deployersnapshotRepo}"
   )
   
   rtMavenRun (
     tool: "${maventool}",
     pom: "${pom}",
-    goals: '"${mavenGoals}"',
+    goals: "${mavenGoals}",
     // Maven options.
     opts: '-Xms1024m -Xmx4096m',
-    resolverId: '"${resolverId}"',
-    deployerId: '"${deployerId}"',
+    resolverId: "${resolverId}",
+    deployerId: "${deployerId}",
   )
   
  
