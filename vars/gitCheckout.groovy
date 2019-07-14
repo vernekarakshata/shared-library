@@ -2,9 +2,9 @@ def call(def giturl, def branch) {
 //	git branch: '${branch}', credentialsId: '${credentialId}', url: '${giturl}'
 //	git([url: ${giturl}, branch: ${branch}, credentialsId: ${credentialId}])
 
-echo "giturl ${giturl}"
-echo "branch ${branch}"
-echo "credentialId ${credentialId}"
+//echo "giturl ${giturl}"
+//echo "branch ${branch}"
+//echo "credentialId ${credentialId}"
 
 checkout([$class: 'GitSCM', 
     branches: [[name: "${branch}"]], 
