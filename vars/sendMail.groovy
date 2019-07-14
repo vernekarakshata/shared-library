@@ -1,8 +1,13 @@
-def call(def emailTemplate, def subject, def to, def from, def cc, def bcc, def replyTo) {
+def call(def to, def from, def cc, def bcc, def replyTo) {
 //	echo "Hello ${emailTemplate}"
   
   mail bcc: '', 
-       body: "${emailTemplate}",
+       body: "<b>Project Build Status</b>" + 
+                "<br><br>Please find below the project details:" +
+                "<table>" + 
+                "<tr><td>Project</td><td>${env.JOB_NAME}</td></tr>" +
+                "<tr><td>Build Number</td><td>${env.BUILD_NUMBER}</td></tr>" +
+                "<tr><td>Project Deployment URL</td><td>${env.BUILD_URL}</td></tr></table>",
        cc: "${cc}",
        charset: 'UTF-8',
        from: "${from}",
