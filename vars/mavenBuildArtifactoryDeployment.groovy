@@ -22,7 +22,7 @@ def call(def maventool, def pom, def mavenGoals, def artifactoryServerId,
   rtMaven.deployer releaseRepo: '"${deployerReleaseRepo}"', snapshotRepo: '"${deployersnapshotRepo}"', server: server
   rtMaven.resolver releaseRepo: '"${resolverReleaseRepo}"', snapshotRepo: '"${resolversnapshotRepo}"', server: server
   buildInfo = Artifactory.newBuildInfo()
-  rtMaven.run pom: "${pom}", goals: "${mavenGoals}", buildInfo: buildInfo
+  rtMaven.run pom: "${pom}", goals: '"${mavenGoals}"', buildInfo: buildInfo
   server.publishBuildInfo buildInfo
   
 
