@@ -26,7 +26,7 @@ def call(def maventool, def pom, def mavenGoals, def artifactoryServerId,
   server.publishBuildInfo buildInfo
   */
 
-/*
+
   rtMavenResolver (
     id: "${resolverId}",
     serverId: "${artifactoryServerId}",
@@ -34,7 +34,7 @@ def call(def maventool, def pom, def mavenGoals, def artifactoryServerId,
     snapshotRepo: "${resolversnapshotRepo}"
   )  
   
-  */
+
  
   rtMavenDeployer (
       id: "${deployerId}",
@@ -49,7 +49,7 @@ def call(def maventool, def pom, def mavenGoals, def artifactoryServerId,
     goals: "${mavenGoals}",
     // Maven options.
     opts: '-Xms1024m -Xmx4096m',
- //   resolverId: "${resolverId}",
+    resolverId: "${resolverId}",
     deployerId: "${deployerId}",
   )
   
