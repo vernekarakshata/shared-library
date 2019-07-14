@@ -26,13 +26,15 @@ def call(def maventool, def pom, def mavenGoals, def artifactoryServerId,
   server.publishBuildInfo buildInfo
   */
 
-
+/*
   rtMavenResolver (
     id: "${resolverId}",
     serverId: "${artifactoryServerId}",
     releaseRepo: "${resolverReleaseRepo}",
     snapshotRepo: "${resolversnapshotRepo}"
   )  
+  
+  */
  
   rtMavenDeployer (
       id: "${deployerId}",
