@@ -43,7 +43,7 @@ def call(def maventool, def pom, def mavenGoals, def artifactoryServerId,
   
   rtMavenRun (
     tool: "${maventool}",
-    pom: '"${pom}"',
+    pom: "${pom}",
     goals: '"${mavenGoals}"',
     // Maven options.
     opts: '-Xms1024m -Xmx4096m',
