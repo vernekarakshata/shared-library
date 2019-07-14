@@ -14,7 +14,7 @@ def call(def maventool, def pom, def mavenGoals, def artifactoryServerId,
   echo "deployerReleaseRepo ${deployerReleaseRepo}"
   echo "deployersnapshotRepo ${deployersnapshotRepo}"
   
-  
+  /*
   def server = Artifactory.server "${artifactoryServerId}"
   def rtMaven = Artifactory.newMavenBuild()
   def buildInfo
@@ -24,19 +24,19 @@ def call(def maventool, def pom, def mavenGoals, def artifactoryServerId,
   buildInfo = Artifactory.newBuildInfo()
   rtMaven.run pom: "${pom}", goals: '"${mavenGoals}"', buildInfo: buildInfo
   server.publishBuildInfo buildInfo
-  
+  */
 
-/*
+
   rtMavenResolver (
     id: '"${resolverId}"',
-    serverId: '"${artifactoryServerId}"',
+    serverId: "${artifactoryServerId}",
     releaseRepo: '"${resolverReleaseRepo}"',
     snapshotRepo: '"${resolversnapshotRepo}"'
   )  
  
   rtMavenDeployer (
       id: '"${deployerId}"',
-      serverId: '"${artifactoryServerId}"',
+      serverId: "${artifactoryServerId}",
       releaseRepo: '"${deployerReleaseRepo}"',
       snapshotRepo: '"${deployersnapshotRepo}"'
   )
@@ -51,5 +51,5 @@ def call(def maventool, def pom, def mavenGoals, def artifactoryServerId,
     deployerId: '"${deployerId}"',
   )
   
- */
+ 
 }
