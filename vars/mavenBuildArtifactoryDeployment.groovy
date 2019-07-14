@@ -28,7 +28,7 @@ def call(def maventool, def pom, def mavenGoals, def artifactoryServerId,
 
 
   rtMavenResolver (
-    id: "${resolverId}"',
+    id: "${resolverId}",
     serverId: "${artifactoryServerId}",
     releaseRepo: "${resolverReleaseRepo}",
     snapshotRepo: "${resolversnapshotRepo}"
