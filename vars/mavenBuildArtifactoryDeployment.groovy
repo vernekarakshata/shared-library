@@ -53,5 +53,9 @@ def call(def maventool, def pom, def mavenGoals, def artifactoryServerId,
     deployerId: "${deployerId}",
   )
   
+  rtPublishBuildInfo (
+    serverId: "${artifactoryServerId}"
+)
+  
  
 }
