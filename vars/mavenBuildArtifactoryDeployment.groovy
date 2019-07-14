@@ -49,7 +49,7 @@ def call(def maventool, def pom, def mavenGoals, def artifactoryServerId,
     goals: "${mavenGoals}",
     // Maven options.
     opts: '-Xms1024m -Xmx4096m',
-    resolverId: "${resolverId}",
+ //   resolverId: "${resolverId}",
     deployerId: "${deployerId}",
   )
   
