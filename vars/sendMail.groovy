@@ -8,7 +8,7 @@ def call(def emailTemplate, def subject, def to, def from, def cc, def bcc, def 
        from: "${from}",
        mimeType: 'text/html',
        replyTo: "${replyTo}",
-       subject: "${subject}", 
+       subject: ${subject}, 
        to: "${to}";
   
   
