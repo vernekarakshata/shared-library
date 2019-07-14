@@ -6,6 +6,6 @@ def call(def registoryName, def tagName, def registoryCredential) {
    docker.withRegistry( '', "${registoryCredential}" ) {
       dockerImage.push()
    }
-   sh 'docker rmi "${registoryName}":"${tagName}"'
+   sh 'docker rmi ${registoryName}:${tagName}'
 	
 }
