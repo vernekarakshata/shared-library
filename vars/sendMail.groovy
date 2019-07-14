@@ -1,5 +1,5 @@
 def call(def emailTemplate, def subject, def to, def from, def cc, def bcc, def replyTo) {
-	echo "Hello ${name}"
+	echo "Hello ${emailTemplate}"
   
   mail bcc: '', 
        body: "${emailTemplate}",
