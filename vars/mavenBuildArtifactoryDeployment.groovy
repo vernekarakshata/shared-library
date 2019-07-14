@@ -13,28 +13,28 @@ def call(def maventool, def pom, def mavenGoals, def artifactoryServerId,
   echo "deployerId ${deployerId}"
   echo "deployerReleaseRepo ${deployerReleaseRepo}"
   echo "deployersnapshotRepo ${deployersnapshotRepo}"
-   /*
+
   rtMavenResolver (
-    id: 'resolver-unique-id',
-    serverId: 'Artifactory-1',
-    releaseRepo: 'libs-release",
-    snapshotRepo: 'libs-snapshot"
+    id: '"${resolverId}"',
+    serverId: '"${artifactoryServerId}"',
+    releaseRepo: '"${resolverReleaseRepo}"',
+    snapshotRepo: '"${resolversnapshotRepo}"'
   )  
  
   rtMavenDeployer (
-      id: 'deployer-unique-id',
-      serverId: 'Artifactory-1',
-      releaseRepo: 'libs-release-local',
-      snapshotRepo: "libs-snapshot-local"
+      id: '"${deployerId}"',
+      serverId: '"${artifactoryServerId}"',
+      releaseRepo: '"${deployerReleaseRepo}"',
+      snapshotRepo: '"${deployersnapshotRepo}"'
   )
   
   rtMavenRun (
-    tool: MAVEN_TOOL,
-    pom: 'maven-example/pom.xml',
-    goals: 'clean install',
+    tool: "${maventool}",
+    pom: '"${pom}"',
+    goals: '"${mavenGoals}"',
     // Maven options.
     opts: '-Xms1024m -Xmx4096m',
-    resolverId: 'resolver-unique-id'
-    deployerId: 'deployer-unique-id',
-)*/
+    resolverId: '"${resolverId}"'
+    deployerId: '"${deployerId}"',
+  )
 }
