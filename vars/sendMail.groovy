@@ -1,4 +1,4 @@
-def call(def email, def subject, def to, def from, def cc, def bcc, def replyTo) {
+def call(def emailTemplate, def subject, def to, def from, def cc, def bcc, def replyTo) {
 //	echo "Hello ${emailTemplate}"
   
   mail bcc: '', 
