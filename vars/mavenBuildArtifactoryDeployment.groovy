@@ -12,9 +12,7 @@ def call(def maventool, def pom, def mavenGoals, def artifactoryServerId,
     tool: "${maventool}",
     pom: "${pom}",
     goals: "${mavenGoals}",
-    // Maven options.
     opts: '-Xms1024m -Xmx4096m',
-//    resolverId: "${resolverId}",
     deployerId: "${deployerId}",
   )
   
