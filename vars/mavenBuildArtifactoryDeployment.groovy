@@ -1,16 +1,6 @@
 def call(def maventool, def pom, def mavenGoals, def artifactoryServerId,  
-          def resolverId, def resolverReleaseRepo, def resolversnapshotRepo,
           def deployerId, def deployerReleaseRepo, def deployersnapshotRepo) {
-        
-  rtMavenResolver (
-    id: "${resolverId}",
-    serverId: "${artifactoryServerId}",
-    releaseRepo: "${resolverReleaseRepo}",
-    snapshotRepo: "${resolversnapshotRepo}"
-  )  
-  
-
- 
+         
   rtMavenDeployer (
       id: "${deployerId}",
       serverId: "${artifactoryServerId}",
