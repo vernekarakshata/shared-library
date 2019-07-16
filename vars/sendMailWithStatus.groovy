@@ -13,7 +13,7 @@ def call(def to, def from, def cc, def bcc, def replyTo, def result) {
        from: "${from}",
        mimeType: 'text/html',
        replyTo: "${replyTo}",
-       subject: "Project ${env.JOB_NAME} deployment ${result}", 
+       subject: "Project ${env.JOB_NAME} deployment ${currentBuild.result}", 
        to: "${to}";
   
   
