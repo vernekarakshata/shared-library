@@ -21,3 +21,5 @@ Below are list of different functions implemeted to be used in simple CI/CD pipe
 | Send Mail | [sendMail.groovy](vars/sendMail.groovy) |
 
 
+### Note
+We require to configure respective tools and jenkins plugins in jenkins server as per requirement. 
